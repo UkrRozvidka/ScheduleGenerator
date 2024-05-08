@@ -44,9 +44,9 @@ namespace Coursova
                 while (element1Index == element2Index);
 
 
-                double probability = 1.0 / (Math.Abs(element2Index - element1Index) + 1.0);
+                double probability = 1.0 /  Math.Pow(Math.Abs(element2Index - element1Index), 3);
 
-                if (random.NextDouble() < probability)
+                if (random.NextDouble() <= probability)
                 {
 
                     if (sortedTasks[element1Index].Duration >= sortedTasks[element2Index].Duration)
@@ -64,7 +64,6 @@ namespace Coursova
                         sortedTasks.RemoveAt(element2Index - 1);
                     else
                         sortedTasks.RemoveAt(element2Index);
-                    
                 }
             }
 

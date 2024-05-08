@@ -12,7 +12,7 @@ namespace Coursova
     {
         public static List<Task> Generate(int n, double durationMin = 1, double durationMax = 10, double weightMin = 1, double weightMax = 10, int roundIndex = 0)
         {
-            var random = new Random();
+            var random = new Random(123);
             var result  = new List<Task>();
 
             for (int i = 0; i < n; i++)
